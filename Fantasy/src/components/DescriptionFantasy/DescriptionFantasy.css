@@ -1,0 +1,38 @@
+#description-fantasy ul {
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#description-fantasy li {
+    width: 15rem;
+    text-align: center;
+}
+
+#description-fantasy li img {
+    height: 8rem;
+    width: 12rem;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px grey;
+}
+
+#description-fantasy li h3 {
+    margin: 0.5rem 0;
+}
+
+#description-fantasy li p {
+    font-size: 0.9rem;
+}
+
+#description-fantasy {
+    padding: 2rem;
+    border-radius: 6px;
+    background-color: #140524;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
