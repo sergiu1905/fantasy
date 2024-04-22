@@ -1,0 +1,26 @@
+.exterior {}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 10px;
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.buttons-navigation {
+    margin: 30px 15px;
+}
+
+.link-btn {
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: large;
+}
+
+.link-btn:hover {
+    color: pink;
+}
+
+.map-navigation {}

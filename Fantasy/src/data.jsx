@@ -6,6 +6,7 @@ import clabucet from './assets/partie.webp';
 import peles from './assets/peles.jpg';
 import bran from './assets/bran.jpg';
 import brasov from './assets/brasov.jpg';
+import canionul_7_scari from './assets/canion_7_scari.jpg';
 import exterior1 from './assets/fantasy_exterior2.jpg';
 import foisor from './assets/foisor.jpg';
 import gratar from './assets/gratar.jpg';
@@ -68,6 +69,12 @@ export const ATRACTII = {
     image: brasov,
     description:
       'Așezat în centrul țării, acolo unde s-au întâlnit dintotdeauna drumurile ce au legat teritoriile istorice românești, Brașovul a fost și rămâne o punte de legătură și de circulație a valorilor materiale și spirituale și o zonă de simbioză între cultura românească și cea a naționalităților conlocuitoare. Prin poziția geografică favorabilă, prin valorile sale naturale și culturale, precum și prin dezvoltarea economică, vechiul burg săsesc sau "Orașul Coroanei" exercită o mare capacitate de atracție atât pentru turiștii români, cât și pentru cei străini.',
+  },
+  canionul_7_scari: {
+    title: <a href="https://canionul7scari.ro/">Brasov</a>,
+    image: canionul_7_scari,
+    description:
+      'Canionul Șapte Scări este un defileu săpat în calcare jurasice din partea vestică a munților Piatra Mare, în județul Brașov, România. Lungimea lor este de 160 metri cu o diferență de nivel de 58 de metri, la o altitudine de 948 metri. Defileul este format din șapte trepte cu înalțimi între 2,5 și 15 metri, care îi dau numele și care se transformă în cascade când volumul de apă al pârâului Valea Șurii de Piatră, afluent de stânga al Șipoaiei, este ridicat. Traseul poate fi parcurs cu ajutorul unor scări, nefiind nevoie de echipament specializat.',
   },
 };
 export const EXTERIOR = [

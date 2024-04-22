@@ -8,7 +8,7 @@ const fantasyDescription = [
   'De aici poate incepe viitoarea ta vacanta...',
   'Relaxare...suntem aici ptr tine...',
 ];
-function genRandomInt() {
+export function genRandomInt() {
   return Math.floor(Math.random() * fantasyDescription.length);
 }
 
@@ -26,3 +26,4 @@ export default function Header() {
     </header>
   );
 }
+export { fantasyDescription };

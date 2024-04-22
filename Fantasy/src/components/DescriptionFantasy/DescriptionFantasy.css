@@ -1,3 +1,20 @@
+.description {
+    width: 78vw;
+    margin-left: 170px;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px lightgrey;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#description-fantasy h2 {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
 #description-fantasy ul {
 
     list-style: none;
@@ -22,8 +39,19 @@
     box-shadow: 2px 2px 5px grey;
 }
 
-#description-fantasy li h3 {
+#description-fantasy li h3 a {
     margin: 0.5rem 0;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+
+
+}
+
+#description-fantasy li h3 a:hover {
+    color: pink;
+    text-decoration: underline;
+
 }
 
 #description-fantasy li p {
@@ -32,7 +60,7 @@
 
 #description-fantasy {
     padding: 2rem;
-    border-radius: 6px;
+    border-radius: 15px;
     background-color: #140524;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+
 }

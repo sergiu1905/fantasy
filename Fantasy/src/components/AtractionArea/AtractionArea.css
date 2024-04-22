@@ -30,7 +30,7 @@
 }
 
 #atractions menu button:hover {
-    background-color: #1b082f;
+    text-decoration: underline 2px pink;
     color: #ebe7ef;
 }
 
