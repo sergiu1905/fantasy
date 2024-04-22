@@ -51,6 +51,12 @@ export default function AtractionsArea() {
         >
           Brasov
         </TabButtons>
+        <TabButtons
+          selectedBtn={atraction === 'canionul_7_scari'}
+          onSelectedClick={() => handleClick('canionul_7_scari')}
+        >
+          Canionul 7 Scari
+        </TabButtons>
       </menu>
 
       {tabAtraction}
