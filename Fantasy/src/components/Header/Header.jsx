@@ -17,9 +17,9 @@ export default function Header() {
   return (
     <header>
       <div className="header-title">
-        <img src={piatra_mare} alt="muntele piatra mare" />
+        <img id="img1" src={piatra_mare} alt="muntele piatra mare" />
         <h1>FANTASY</h1>
-        <img src={piatra_mare1} alt="muntele piatra mare" />
+        <img id="img2" src={piatra_mare1} alt="muntele piatra mare" />
       </div>
 
       <p>{description}</p>

@@ -35,3 +35,28 @@ header p {
     color: #8964b0;
     font-family: "Roboto Condensed", sans-serif;
 }
+
+@media screen and (max-width: 1150px) {
+    .header-title {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-title h1 {
+        order: 1;
+    }
+
+    .header-title #img2 {
+
+        display: none;
+
+    }
+
+    .header-title #img1 {
+
+        order: 2;
+
+    }
+}
+
+@media screen and (max-width: 1000px) {}

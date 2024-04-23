@@ -1,10 +1,7 @@
 .description {
-    width: 78vw;
-    margin-left: 170px;
+
     display: flex;
-    border-radius: 15px;
-    box-shadow: 4px 4px 10px lightgrey;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
 
 }
@@ -13,6 +10,7 @@
     display: flex;
     justify-content: center;
     color: white;
+
 }
 
 #description-fantasy ul {
@@ -59,8 +57,20 @@
 }
 
 #description-fantasy {
+    width: 93vw;
     padding: 2rem;
     border-radius: 15px;
     background-color: #140524;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px lightgrey;
 
+    flex-direction: column;
+
+}
+
+@media screen and (max-width: 1300px) {
+    #description-fantasy li {
+        width: 45%;
+    }
 }

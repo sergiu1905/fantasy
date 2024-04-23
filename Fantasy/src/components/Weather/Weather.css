@@ -2,10 +2,15 @@
     border-radius: 15px;
     background-color: rgba(10, 217, 217, 0.313);
     box-shadow: 4px 4px 10px lightgrey;
+
+
+
 }
 
 .nav-header {
+
     display: flex;
+    justify-content: space-between;
     margin-bottom: 2rem;
 }
 
@@ -69,6 +74,8 @@
 }
 
 .map-weather {
+    flex-direction: column;
+    padding-left: 50px;
     width: 95vw;
     display: flex;
 
@@ -85,4 +92,25 @@
     border-radius: 15px;
     box-shadow: 4px 4px 10px lightgrey;
 
+}
+
+@media screen and (max-width: 1500px) {
+    h4 {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .nav-header {
+        flex-direction: column;
+    }
+
+    .map {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .weather-cards {
+        justify-content: space-around;
+    }
 }

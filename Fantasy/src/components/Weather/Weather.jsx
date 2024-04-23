@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react';
 import './Weather.css';
+
 export default function Weather() {
   const [city, setCity] = useState('predeal');
   const [weatherData, setWeatherData] = useState([]);
   const [error, setError] = useState(null);
   const appid = '6da5dcbf6b42c5bead5a34db18af474a';
+  const [maxCards, setMaxCards] = useState(window.innerWidth <= 900 ? 3 : 5);
 
   const getWeatherForecast = async (cityName) => {
     try {
       if (!cityName.trim()) {
-        throw new Error('emty city');
+        throw new Error('empty city');
       }
       const res = await fetch(
         `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${appid}&units=metric`
@@ -22,34 +24,48 @@ export default function Weather() {
       const dailyWeatherData = data.list.filter(
         (item, index) => index % 8 === 0
       );
-      console.log(data);
 
-      setWeatherData(dailyWeatherData);
+      setWeatherData(dailyWeatherData.slice(0, maxCards));
       setError(null);
     } catch (error) {
       setError(error.message);
-      if (error.message === 'emty city') {
+      if (error.message === 'empty city') {
         alert('Introdu un nume de oraș înainte de a căuta vremea.');
       } else {
-        alert('Introdu un nume valid de oras');
+        alert('Introdu un nume valid de oraș');
       }
       setCity('predeal');
     }
   };
+
   useEffect(() => {
     getWeatherForecast(city);
-  }, []);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [maxCards]);
+  const handleResize = () => {
+    const newMaxCards = window.innerWidth <= 900 ? 3 : 5;
+    if (newMaxCards !== maxCards) {
+      setMaxCards(newMaxCards);
+    }
+  };
+
   const handleSearch = () => {
     getWeatherForecast(city);
   };
+
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       getWeatherForecast(city);
     }
   };
+
   const handleInput = () => {
     setCity('');
   };
+
   return (
     <div className="nav-header">
       <iframe
@@ -86,6 +102,7 @@ export default function Weather() {
     </div>
   );
 }
+
 function WeatherCard({ data }) {
   const { dt, main, weather, wind, pop } = data;
   const date = new Date(dt * 1000);
@@ -111,17 +128,17 @@ function WeatherCard({ data }) {
   const temperature = Math.round(main.temp);
   const rainProbability = Math.round(pop * 100);
   const windSpeed = Math.round(wind.speed);
+
   return (
     <div className="weather-card">
       <h3>{weekday.toLocaleUpperCase()}</h3>
       <h4>{formattedDate}</h4>
-
       <img
         src={`https://openweathermap.org/img/wn/${icon}.png`}
         alt="Weather sky"
       />
       <h4>Temp: {temperature}°C</h4>
-      <h4>Averse: {rainProbability} %</h4>
+      <h4>Averse: {rainProbability}%</h4>
       <h4>Vant: {windSpeed} km/h</h4>
     </div>
   );
